@@ -1,0 +1,437 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    /* background-image: url(../images/game_bg.jpg); */
+    background-position: center top;
+    background-size: contain;
+    background-color: #ffc21f;
+    max-width: 545px;
+    margin: 0 auto;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 90px 5%;
+}
+
+.game-container::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #00000020;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 5%;
+    left: 0;
+}
+
+.game-header {}
+
+.game-body ul {
+    background-color: #ffc21f;
+    padding: 0 5%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+mailto:dkaegir@isb.com.tw  aegir1234@
+.game-body ul li {
+    width: 100%;
+    border: 10px solid #fff;
+    background-color: #8ea8a8;
+    border-bottom: 0px;
+}
+
+.game-body ul li:nth-child(4) {
+    margin-bottom: 45px;
+    border-bottom: 10px solid #fff;
+}
+
+.game-body ul li:last-child {
+    border-bottom: 10px solid #fff;
+}
+
+.game-body ul li .floor-container {
+    width: 100%;
+    position: relative;
+}
+
+.game-body ul li:nth-child(1) .floor-container {
+    padding-bottom: 25%;
+}
+
+.game-body ul li:nth-child(2) .floor-container {
+    height: 85px;
+}
+
+.game-body ul li:nth-child(3) .floor-container {
+    height: 86px;
+}
+
+.game-body ul li:nth-child(5) .floor-container {
+    height: 85px;
+}
+
+.button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #ffd800;
+    display: inline-block;
+    color: #000;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 999;
+}
+
+.box-shadow {
+    position: relative;
+    display: inline-block;
+}
+
+.box-shadow::before {
+    content: '';
+    display: inline-block;
+    background-color: #00000020;
+    position: absolute;
+    left: 5px;
+    bottom: -5px;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.timer {
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    color: #000;
+    z-index: 999;
+}
+
+.floor-object {
+    display: block;
+    position: absolute;
+}
+
+.floor-container {
+    position: relative;
+    height: 82px;
+}
+
+.food-object-ing {
+    z-index: 99999;
+}
+
+.game-body ul li:nth-child(1) .floor-container .dirt-object {
+    right: 15px;
+    top: 15px;
+}
+
+.game-body ul li:nth-child(2) .floor-container .dirt-object {
+    bottom: -20px;
+    left: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .dirt-object {
+    right: 15px;
+}
+
+.game-body ul li:nth-child(4) .floor-container .dirt-object {
+    left: 30px;
+    top: 5px;
+}
+
+.game-body ul li:nth-child(5) .floor-container .dirt-object {
+    right: 30px;
+    top: 10px;
+}
+
+.game-body ul li:nth-child(6) .floor-container .dirt-object {
+    right: 90px;
+    top: -10px;
+}
+
+.game-body ul li:nth-child(1) .floor-container .bad-food-object-01 {
+    right: 140px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(1) .floor-container .bad-food-object-02 {
+    right: 75px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(2) .floor-container .bad-food-object-03 {
+    left: 5px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(2) .floor-container .bad-food-object-04 {
+    right: 90px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .bad-food-object-05 {
+    right: 180px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .bad-food-object-06 {
+    right: 60px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .bad-food-object-07 {
+    right: 15px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(4) .floor-container .bad-food-object-08 {
+    left: 0px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(4) .floor-container .bad-food-object-09 {
+    left: 60px;
+    bottom: -10px;
+}
+
+.game-body ul li:nth-child(4) .floor-container .bad-food-object-10 {
+    right: 120px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(5) .floor-container .bad-food-object-11 {
+    right: 60px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(6) .floor-container .bad-food-object-12 {
+    left: 15px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(1) .floor-container .food-object-01,
+.game-body ul li:nth-child(1) .floor-container .p-food-object-01 {
+    left: 10px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(2) .floor-container .food-object-02,
+.game-body ul li:nth-child(2) .floor-container .p-food-object-02 {
+    right: 170px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(2) .floor-container .food-object-03,
+.game-body ul li:nth-child(2) .floor-container .p-food-object-03 {
+    right: 90px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(2) .floor-container .food-object-04,
+.game-body ul li:nth-child(2) .floor-container .p-food-object-04 {
+    right: 10px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .food-object-05,
+.game-body ul li:nth-child(3) .floor-container .p-food-object-05 {
+    right: 180px;
+    bottom: 0;
+}
+
+.p-food-object-05-1 {
+    left: 10px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .food-object-06,
+.game-body ul li:nth-child(3) .floor-container .p-food-object-06 {
+    right: 70px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(3) .floor-container .food-object-07,
+.game-body ul li:nth-child(3) .floor-container .p-food-object-07 {
+    right: 15px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(4) .floor-container .food-object-08,
+.game-body ul li:nth-child(4) .floor-container .p-food-object-08 {
+    right: 100px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(4) .floor-container .food-object-09,
+.game-body ul li:nth-child(4) .floor-container .p-food-object-09 {
+    right: 15px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(5) .floor-container .food-object-10,
+.game-body ul li:nth-child(5) .floor-container .p-food-object-10 {
+    left: 5px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(5) .floor-container .food-object-11,
+.game-body ul li:nth-child(5) .floor-container .p-food-object-11 {
+    left: 110px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(5) .floor-container .food-object-12,
+.game-body ul li:nth-child(5) .floor-container .p-food-object-12 {
+    right: 82.5px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(5) .floor-container .food-object-13,
+.game-body ul li:nth-child(5) .floor-container .p-food-object-13 {
+    right: 5px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(6) .floor-container .food-object-14,
+.game-body ul li:nth-child(6) .floor-container .p-food-object-14 {
+    left: 10px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(6) .floor-container .food-object-15,
+.game-body ul li:nth-child(6) .floor-container .p-food-object-15 {
+    left: 90px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(6) .floor-container .food-object-16,
+.game-body ul li:nth-child(6) .floor-container .p-food-object-16 {
+    right: 90px;
+    bottom: 0;
+}
+
+.game-body ul li:nth-child(6) .floor-container .food-object-17,
+.game-body ul li:nth-child(6) .floor-container .p-food-object-17 {
+    right: 10px;
+    bottom: 0;
+}
+
+.button-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #00000090;
+}
+
+.blue-button {
+    background-color: #fff!important;
+    color: #000!important;
+    border: 2px solid #ffc21f;
+}
+
+.blue-button:hover {
+    border: 2px solid #fff;
+    background-color: blue!important;
+    color: #fff!important;
+}
+
+
+/* [class*=p-food-object] {
+    display: none;
+} */
+
+.package-object img {
+    position: relative;
+}
+
+.package-object img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff40;
+    border-top: 5px solid #ffffff40;
+    top: 0;
+    left: 0;
+}
+
+.floor-object img {
+    max-height: 45px;
+}
+
+img.small {
+    max-height: 30px;
+}
+
+img.medium {
+    max-height: 60px;
+}
+
+img.large {
+    max-height: 75px;
+}
+
+img.x-large {
+    max-height: 100px;
+}
+
+
+/* modal-content_reset_start */
+
+.modal-content {
+    background-color: transparent;
+}
+
+
+/* modal-content_reset_end */
+
+.word_pad {
+    position: relative;
+    background-image: url(../images/word_pad.png);
+    /* max-width: 375px; */
+    width: 100%;
+    padding-bottom: 140%;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.word_pad .text-container {
+    position: absolute;
+    bottom: 22.5%;
+    z-index: 99999999;
+    width: 55%;
+    left: 17.25%;
+    height: 140px;
+}
+
+https://template.iseedbox.com.tw/louis/game_refrigerator_management/
+https://template.iseedbox.com.tw/louis/game_refrigerator_management/index_en.html
