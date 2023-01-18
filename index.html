@@ -1,1489 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;900&display=swap" rel="stylesheet">
-</head>
+    <title>Reflux HTML CSS Template</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-<body>
-    <div class="game-container">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
 
-        <div class="game-header" style="">
-            <div class="row row-margin">
-                <div class="col-md-6 col-padding col-6">
-                    <div class="box-shadow">
-                        <a href="" class="button exit-button">離開遊戲</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-padding col-6 text-right">
-                    <div class="box-shadow">
-                        <span class="button timer" id="Check_i">00:00</span>
-                    </div>
-                </div>
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
             </div>
-        </div>
-        <!-- game-ing -->
-        <div class="game-body">
-            <ul>
+            <div class="author-content">
+              <h4>Reflux Me</h4>
+              <span>Web Designer</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section2">What I’m good at</a></li>
+                <li><a href="#section3">My Work</a></li>
+                <li><a href="#section4">Contact Me</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
                 <li>
-                    <div class="floor-container">
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria1" class="floor-object bacteria-object-01" onclick="no_show('bacteria_01')">
-                            <img src="images/bacteria-02.png" alt="" class="large" id="bacteria_01">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria2" class="floor-object bacteria-object-02" onclick="no_show('bacteria_02')">
-                            <img src="images/bacteria-01.png" alt="" class="large" id="bacteria_02">
-                        </a>
-                        <!-- dirt-object -->
-                        <a href="javascript:void(0)" id="dirt1" class="floor-object dirt-object" onclick="no_show('dirt_01')">
-                            <img src="images/dirt-01.png" alt="" id="dirt_01">
-                        </a>
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad1" class="floor-object bad-food-object-01" onclick="no_show_food('bad_food_01')">
-                            <img src="images/bad-food-01.png" alt="" id="bad_food_01">
-                        </a>
-                        <a href="javascript:void(0)" id="bad2" class="floor-object bad-food-object-02" onclick="no_show_food('bad_food_02')">
-                            <img src="images/bad-food-02.png" alt="" class="medium" id="bad_food_02">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food1" class="floor-object food-object-01">
-                            <img src="images/food-01.png" alt="" class="small" id="food_01">
-                        </a>
-                        <!-- p-food-object -->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-01">
-                            <img src="images/p-food-01.png" alt="" class="small" id="p_food_01">
-                        </a>
-                    </div>
+                  <a href="https://fb.com/templatemo"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
                 </li>
                 <li>
-                    <div class="floor-container">
-                        <div class="floor-title">熟食區</div>
-                        <a href="javascript:void(0)" id="bacteria3" class="floor-object bacteria-object-01" onclick="no_show('bacteria_03')">
-                            <img src="images/bacteria-01.png" alt="" class="large" id="bacteria_03">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria4" class="floor-object bacteria-object-02" onclick="no_show('bacteria_04')">
-                            <img src="images/bacteria-03.png" alt="" class="large" id="bacteria_04">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria5" class="floor-object bacteria-object-03" onclick="no_show('bacteria_05')">
-                            <img src="images/bacteria-04.png" alt="" class="large" id="bacteria_05">
-                        </a>
-                        <a href="javascript:void(0)" id="dirt2" class="floor-object dirt-object" onclick="no_show('dirt_02')">
-                            <img src="images/dirt-02.png" alt="" class="small" id="dirt_02">
-                        </a>
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad3" class="floor-object bad-food-object-03" onclick="no_show_food('bad_food_03')">
-                            <img src="images/bad-food-03.png" alt="" id="bad_food_03">
-                        </a>
-                        <a href="javascript:void(0)" id="bad4" class="floor-object bad-food-object-04 " onclick="no_show_food('bad_food_04')">
-                            <img src="images/bad-food-04.png" alt="" id="bad_food_04">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food2" class="floor-object food-object-02">
-                            <img src="images/food-02.png" alt="" class="x-large" id="food_02">
-                        </a>
-
-                        <a href="javascript:void(0)" id="food3" class="floor-object food-object-03">
-                            <img src="images/food-03.png" alt="" class="large" id="food_03">
-                        </a>
-                        <a href="javascript:void(0)" id="food4" class="floor-object food-object-04">
-                            <img src="images/food-04.png" alt="" class="large" id="food_04">
-                        </a>
-                        <!-- p-food-object -->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-02">
-                            <img src="images/p-food-02.png" alt="" class="x-large" id="p_food_02">
-                        </a>
-                        <a id="Box1" href="javascript:void(0)" class="floor-object p-food-object-03" ondrop="Drop(event)" ondragover="AllowDrop(event)">
-                            <div id="Img1" draggable="true" ondragstart="Drag(event)">
-                                <p class="p-title">生牛肉排</p>
-                                <img src="images/p-food-03.png" alt="" class="large" id="p_food_03">
-                            </div>
-                        </a>
-                        <!--                        <a href="javascript:void(0)" class="floor-object p-food-object-03">-->
-                        <!--                            <img src="images/p-food-03.png" alt="" class="large" id="p_food_03">-->
-                        <!--                        </a>-->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-04">
-                            <img src="images/p-food-04.png" alt="" class="large" id="p_food_04">
-                        </a>
-                    </div>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
                 </li>
                 <li>
-                    <div class="floor-container">
-                        <div class="floor-title">生鮮肉品區</div>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria6" class="floor-object bacteria-object-01" onclick="no_show('bacteria_06')">
-                            <img src="images/bacteria-04.png" alt="" class="large" id="bacteria_06">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria7" class="floor-object bacteria-object-02" onclick="no_show('bacteria_07')">
-                            <img src="images/bacteria-05.png" alt="" class="large" id="bacteria_07">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria8" class="floor-object bacteria-object-03" onclick="no_show('bacteria_08')">
-                            <img src="images/bacteria-06.png" alt="" class="large" id="bacteria_08">
-                        </a>
-                        <a href="javascript:void(0)" id="dirt3" class="floor-object dirt-object" onclick="no_show('dirt_03_1')">
-                            <img src="images/dirt-03-1.png" alt="" class="medium" id="dirt_03_1">
-                        </a>
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad5" class="floor-object bad-food-object-05" onclick="no_show_food('bad_food_05')">
-                            <img src="images/bad-food-05.png" alt="" id="bad_food_05">
-                        </a>
-                        <a href="javascript:void(0)" id="bad6" class="floor-object bad-food-object-06" onclick="no_show_food('bad_food_06')">
-                            <img src="images/bad-food-06.png" alt="" id="bad_food_06">
-                        </a>
-                        <a href="javascript:void(0)" id="bad7" class="floor-object bad-food-object-07" onclick="no_show_food('bad_food_07')">
-                            <img src="images/bad-food-07.png" alt="" class="small" id="bad_food_07">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food5" class="floor-object food-object-05">
-                            <img src="images/food-05.png" alt="" class="large" id="food_05">
-                        </a>
-                        <a href="javascript:void(0)" id="food6" class="floor-object food-object-06">
-                            <img src="images/food-06.png" alt="" class="x-large" id="food_06">
-                        </a>
-                        <a href="javascript:void(0)" id="food7" class="floor-object food-object-07">
-                            <img src="images/food-07.png" alt="" class="--tt" id="food_07">
-                        </a>
-                        <!-- p-food-object -->
-                        <a id="Box5" href="javascript:void(0)" class="floor-object p-food-object-05-1" ondrop="Drop(event)" ondragover="AllowDrop(event)">
-                            <div id="Img5" draggable="true" ondragstart="Drag(event)">
-                                <p class="p-title">冰涼西瓜</p>
-                                <img src="images/p-food-05-1.png" alt="" class="large" id="p_food_05_1">
-                            </div>
-                        </a>
-                        <!--                        <a href="javascript:void(0)" class="floor-object p-food-object-05-1">-->
-                        <!--                            <img src="images/p-food-05-1.png" alt="" class="x-large" id="p_food_05_1">-->
-                        <!--                        </a>-->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-05">
-                            <img src="images/p-food-05.png" alt="" class="large" id="p_food_05">
-                        </a>
-                        <a href="javascript:void(0)" class="floor-object p-food-object-06">
-                            <img src="images/p-food-06.png" alt="" class="x-large" id="p_food_06">
-                        </a>
-                        <a href="javascript:void(0)" class="floor-object p-food-object-07">
-                            <img src="images/p-food-07.png" alt="" class="--tt" id="p_food_07">
-                        </a>
-                    </div>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
                 </li>
                 <li>
-                    <div class="floor-container">
-                        <div class="floor-title">隨時取用區</div>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria9" class="floor-object bacteria-object-01" onclick="no_show('bacteria_09')">
-                            <img src="images/bacteria-02.png" alt="" class="large" id="bacteria_09">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria10" class="floor-object bacteria-object-02" onclick="no_show('bacteria_10')">
-                            <img src="images/bacteria-02.png" alt="" class="large" id="bacteria_10">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria11" class="floor-object bacteria-object-03" onclick="no_show('bacteria_11')">
-                            <img src="images/bacteria-06.png" alt="" class="large" id="bacteria_11">
-                        </a>
-                        <a href="javascript:void(0)" id="dirt4" class="floor-object dirt-object" onclick="no_show('dirt_04')">
-                            <img src="images/dirt-04.png" alt="" id="dirt_04">
-                        </a>
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad8" class="floor-object bad-food-object-08" onclick="no_show_food('bad_food_08')">
-                            <img src="images/bad-food-08.png" alt="" class="large" id="bad_food_08">
-                        </a>
-                        <a href="javascript:void(0)" id="bad9" class="floor-object bad-food-object-09" onclick="no_show_food('bad_food_09')">
-                            <img src="images/bad-food-09.png" alt="" id="bad_food_09">
-                        </a>
-                        <a href="javascript:void(0)" id="bad10" class="floor-object bad-food-object-10" onclick="no_show_food('bad_food_10')">
-                            <img src="images/bad-food-10.png" alt="" id="bad_food_10">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food8" class="floor-object food-object-08">
-                            <img src="images/food-08.png" alt="" class="large" id="food_08">
-                        </a>
-                        <a href="javascript:void(0)" id="food9" class="floor-object food-object-09">
-                            <img src="images/food-09.png" alt="" class="large" id="food_09">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-08">
-                            <img src="images/p-food-08.png" alt="" class="large" id="p_food_08">
-                        </a>
-                        <a id="Box4" href="javascript:void(0)" class="floor-object p-food-object-09" ondrop="Drop(event)" ondragover="AllowDrop(event)">
-                            <div id="Img4" draggable="true" ondragstart="Drag(event)">
-                                <p class="p-title">新鮮蘆筍</p>
-                                <img src="images/p-food-09.png" alt="" class="large" id="p_food_09">
-                            </div>
-                        </a>
-                        <!--                        <a href="javascript:void(0)" class="floor-object p-food-object-09">-->
-                        <!--                            <img src="images/p-food-09.png" alt="" class="large" id="p_food_09">-->
-                        <!--                        </a>-->
-                    </div>
-                </li>
-
-                <li>
-                    <div class="floor-container">
-                        <div class="floor-title">蔬果層</div>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria12" class="floor-object bacteria-object-01" onclick="no_show('bacteria_12')">
-                            <img src="images/bacteria-04.png" alt="" class="large" id="bacteria_12">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria13" class="floor-object bacteria-object-02" onclick="no_show('bacteria_13')">
-                            <img src="images/bacteria-03.png" alt="" class="large" id="bacteria_13">
-                        </a>
-                        <a href="javascript:void(0)" id="dirt5" class="floor-object dirt-object" onclick="no_show('dirt_05')">
-                            <img src="images/dirt-05.png" alt="" id="dirt_05">
-                        </a>
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad11" class="floor-object bad-food-object-11" onclick="no_show_food('bad_food_11')">
-                            <img src="images/bad-food-11.png" alt="" id="bad_food_11">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food10" class="floor-object food-object-10">
-                            <img src="images/food-10.png" alt="" class="x-large" id="food_10">
-                        </a>
-                        <a href="javascript:void(0)" id="food11" class="floor-object food-object-11">
-                            <img src="images/food-11.png" alt="" class="medium" id="food_11">
-                        </a>
-                        <a href="javascript:void(0)" id="food12" class="floor-object food-object-12">
-                            <img src="images/food-12.png" alt="" class="large" id="food_12">
-                        </a>
-                        <a href="javascript:void(0)" id="food13" class="floor-object food-object-13">
-                            <img src="images/food-13.png" alt="" class="large" id="food_13">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-10">
-                            <img src="images/p-food-10.png" alt="" class="x-large" id="p_food_10">
-                        </a>
-                        <a href="javascript:void(0)" class="floor-object p-food-object-11">
-                            <img src="images/p-food-11.png" alt="" class="medium" id="p_food_11">
-                        </a>
-                        <a href="javascript:void(0)" class="floor-object p-food-object-12">
-                            <img src="images/p-food-12.png" alt="" class="large" id="p_food_12">
-                        </a>
-
-                        <a id="Box3" href="javascript:void(0)" class="floor-object p-food-object-13" ondrop="Drop(event)" ondragover="AllowDrop(event)">
-                            <div id="Img3" draggable="true" ondragstart="Drag(event)">
-                                <p class="p-title">碳烤雞腿</p>
-                                <img src="images/p-food-13.png" alt="" class="large" id="p_food_13">
-                            </div>
-                        </a>
-
-                        <!--                        <a href="javascript:void(0)" class="floor-object p-food-object-13">-->
-                        <!--                            <p class="p-title">碳烤雞腿</p>-->
-                        <!--                            <img src="images/p-food-13.png" alt="" class="large" id="p_food_13">-->
-                        <!--                        </a>-->
-                    </div>
+                  <a href="#"><i class="fa fa-dribbble"></i></a>
                 </li>
                 <li>
-                    <div class="floor-container">
-                        <div class="floor-title">蔬果層</div>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria14" class="floor-object bacteria-object-01" onclick="no_show('bacteria_14')">
-                            <img src="images/bacteria-05.png" alt="" class="large" id="bacteria_14">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria15" class="floor-object bacteria-object-02" onclick="no_show('bacteria_15')">
-                            <img src="images/bacteria-03-02.png" alt="" class="large" id="bacteria_15">
-                        </a>
-                        <!-- bacteria-object -->
-                        <a href="javascript:void(0)" id="bacteria16" class="floor-object bacteria-object-03" onclick="no_show('bacteria_16')">
-                            <img src="images/bacteria-01.png" alt="" class="large" id="bacteria_16">
-                        </a>
-                        <a href="javascript:void(0)" id="dirt6" class="floor-object dirt-object" onclick="no_show('dirt_06')">
-                            <img src="images/dirt-06.png" alt="" id="dirt_06">
-                        </a>
-
-                        <!-- bad-food-object -->
-                        <a href="javascript:void(0)" id="bad12" class="floor-object bad-food-object-12" onclick="no_show_food('bad_food_12')">
-                            <img src="images/bad-food-12.png" alt="" class="medium" id="bad_food_12">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" id="food14" class="floor-object food-object-14">
-                            <img src="images/food-14.png" alt="" class="large" id="food_14">
-                        </a>
-                        <a href="javascript:void(0)" id="food15" class="floor-object food-object-15">
-                            <img src="images/food-15.png" alt="" class="large" id="food_15">
-                        </a>
-                        <a href="javascript:void(0)" id="food16" class="floor-object food-object-16">
-                            <img src="images/food-16.png" alt="" class="large" id="food_16">
-                        </a>
-                        <a href="javascript:void(0)" id="food17" class="floor-object food-object-17">
-                            <img src="images/food-17.png" alt="" class="large" id="food_17">
-                        </a>
-                        <!-- food-object -->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-14">
-                            <img src="images/p-food-14.png" alt="" class="large" id="p_food_14">
-                        </a>
-
-                        <a id="Box2" href="javascript:void(0)" class="floor-object p-food-object-15" ondrop="Drop(event)" ondragover="AllowDrop(event)">
-                            <div draggable="true" ondragstart="Drag(event)" id="Img2">
-                                <p class="p-title">洗過的草莓</p>
-                                <img src="images/p-food-15.png" alt="" class="large" id="p_food_15">
-                            </div>
-                        </a>
-
-                        <!--                        <a href="javascript:void(0)" class="floor-object p-food-object-15">-->
-                        <!--                            <p class="p-title">洗過的草莓</p>-->
-                        <!--                            <img src="images/p-food-15.png" alt="" class="large" id="p_food_15">-->
-                        <!--                        </a>-->
-                        <a href="javascript:void(0)" class="floor-object p-food-object-16">
-                            <img src="images/p-food-16.png" alt="" class="large" id="p_food_16">
-                        </a>
-                        <a href="javascript:void(0)" class="floor-object p-food-object-17">
-                            <img src="images/p-food-17.png" alt="" class="large" id="p_food_17">
-                        </a>
-                    </div>
+                  <a href="#"><i class="fa fa-rss"></i></a>
                 </li>
-            </ul>
-            <div class="text-center step_05-button">
-                <div class="box-shadow">
-                    <a id="finish_btn" href="javascript:void(0)" class="button blue-button" onclick="game_finial()">整理完成</a>
-                </div>
+              </ul>
             </div>
-        </div>
-    </div>
-    <!--    <div class="button-container">-->
-
-    <!-- 開始頁 -->
-    <div class="modal fade" id="game_start" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-                        <div class="text-title">
-                            我的<br/>冰箱管理術
-                        </div>
-
-                        <div class='text-container'>
-                            <p>
-                                冰箱管理是環保與健康飲食的第一步，趕快來看看怎麼幫家裡冰箱健康檢查一番吧！
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="game_start()">輕觸畫面開始遊戲</a>
-                    </div>
-
-                </div>
-
+            <div class="copyright-text">
+              <p>Copyright 2019 Reflux Design</p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- 開始頁 -->
-    <div class="modal fade" id="game_start2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="text-center">
-                    <div class="box-shadow step_01-container">
-                        <a href="" class="button" data-dismiss="modal" onclick="to_step1()">天哪！冰箱裡塞滿了東西，好像溫度也不夠低，還發出奇怪的味道…
-                            <br>
-                            快來幫我動手清理冰箱吧！</a>
-                    </div>
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >This is a Bootstrap v4.2.1 CSS Template for you. Edit and use
+              this layout for your site. Updated on 21 May 2019 for repeated main menu HTML code.</span
+            >
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/left-image.jpg" alt="" />
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Reflux HTML CSS Template</h4>
+                  <p>
+                    Donec tristique feugiat lacus, at sollicitudin nunc euismod
+                    sed. Mauris viverra, erat non sagittis gravida, elit dui
+                    mollis ante, sit amet eleifend purus ligula eget eros. Sed
+                    tincidunt quam vitae neque pharetra dignissim eget ut
+                    libero.
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!-- 第一個步驟 -->
-    <div class="modal fade" id="step_01" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-                        <div class="text-title">
-                            STEP 01<br/>食物大搬家
-                        </div>
-                        <div class='text-container'>
-                            <p>
-                                在開始整理冰箱前，我們得先把冰箱裡的食物都先拿出來，記得先切斷電源並拔除插頭再開始清理喔!
-                            </p>
-                            <!-- 藍色文字_start -->
-                            <p class='text-remark'>
-                                請點擊按鍵切斷電源，並將食材取出。
-                            </p>
-                            <!-- 藍色文字_end -->
-                        </div>
-                    </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Sed sagittis rhoncus velit</h4>
+                  <p>
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum fermentum
+                    eleifend nibh, vitae sodales elit finibus pretium.
+                    Suspendisse potenti. Ut sollicitudin risus a sollicitudin
+                    semper.
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
                 </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="start1()">START <br>
-                            開始</a>
-                    </div>
-
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="assets/images/right-image.jpg" alt="" />
                 </div>
-                <!--                <div class="text-center">-->
-                <!--                    <button type="button" class="btn" data-dismiss="modal" onclick="start1()">START <br>-->
-                <!--                    開始-->
-                <!--                </button>-->
-                <!--                </div>-->
-
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div class="modal fade" id="plus" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="text-center">
-                    <div class="plug-container">
-                        <div class="plug-content">
-                            <div class="plug-r">
-                                <img src="images/plug-r.png" alt="">
-                            </div>
-                            <div class="plug-l">
-                                <img src="images/plug-l.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="box-shadow">
-                        <a href="javascript:void(0);" class="button blue-button plugButton">點我拔除冰箱插頭</a>
-                    </div>
-                </div>
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>What I’m good at?</h2>
+            <div class="line-dec"></div>
+            <span
+              >Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor.
+              Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
+              Nullam eu faucibus diam. Donec eget massa ante.</span
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>HTML5 &amp; CSS3</h4>
+                <p>
+                  Phasellus non convallis dolor. Integer tempor hendrerit arcu
+                  at bibendum. Sed ac ante non metus vehicula congue quis eget
+                  eros.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-    <!-- 清空冰箱按鈕 -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button blue-button" data-dismiss="modal" onclick="clear_all()">點我清空冰箱</a>
-                    </div>
-                </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4>Creative Ideas</h4>
+                <p>
+                  Proin lacus massa, eleifend sed fermentum in, dignissim vel
+                  metus. Nunc accumsan leo nec felis porttitor, ultricies
+                  faucibus purus mollis.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!-- 清空冰箱成功圖 -->
-    <div class="modal fade" id="success" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <img src="images/step-finsh-img.png" data-dismiss="modal" onclick="go_step_2()">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4>Easy Customize</h4>
+                <p>
+                  Integer suscipit condimentum aliquet. Nam quis risus metus.
+                  Nullam faucibus quam eget arcu pretium tincidunt. Nam libero
+                  dui.
+                </p>
+              </div>
             </div>
-        </div>
-    </div>
-
-    <!-- 第二個步驟 -->
-    <div class="modal fade" id="step_02" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-                        <div class="text-title">
-                            STEP 02<br/>冰箱大掃除
-                        </div>
-
-                        <div class='text-container'>
-                            <p>
-                                哇!沒想到平常放食物的地方竟然這麼髒，外溢的湯汁跟食物殘渣，產生汙垢和細菌的滋生，看來得好好清理才行!
-                            </p>
-                            <p class='text-remark'>
-                                請點擊所有髒污處與細菌，將冰箱清理乾淨。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="start2()">START <br>
-                            開始</a>
-                    </div>
-
-                </div>
-
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4>Admin Dashboard</h4>
+                <p>
+                  Vivamus et dui a massa venenatis fringilla. Proin lacus massa,
+                  eleifend sed fermentum in, dignissim vel metus. Nunc accumsan
+                  leo nec felis porttitor.
+                </p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <!-- 第二步驟成功圖 -->
-    <div class="modal fade" id="success_2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <img src="images/step-finsh-img.png" data-dismiss="modal" onclick="go_step_3()">
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>My Work</h2>
+            <div class="line-dec"></div>
+            <span
+              >Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
+              amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
+              mauris.</span
+            >
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="people"
+                    name="isotope-filter"
+                  />
+                  <span>people</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="nature"
+                    name="isotope-filter"
+                  />
+                  <span>nature</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="animals"
+                    name="isotope-filter"
+                  />
+                  <span>animals</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-01.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-01.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>First Title</h4>
+                      <span>free to use our template</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-02.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-02.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Title</h4>
+                      <span>please tell your friends</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-03.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-03.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                      <span>customize anything</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-04.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-04.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                      <span>Re-distribution not allowed</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-05.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-05.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Fifth Awesome</h4>
+                      <span>Ut sollicitudin risus</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-06.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-06.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Awesome Sixth</h4>
+                      <span>Donec eget massa ante</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <!-- 第三個步驟 -->
-    <div class="modal fade" id="step_03" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-
-                        <div class="text-title">
-                            STEP 03<br/>食物斷捨離
-                        </div>
-
-                        <div class='text-container'>
-                            <p>
-                                清理完冰箱後要把食物放回去，但卻發現有些食物已經過期，甚至散發異味了，一起來動動手把這些壞掉的食物清理出來吧!
-                            </p>
-                            <p class='text-remark'>
-                                找出冰箱中有問題的食物，外觀變質及過期者，點擊並移除它們。
-                            </p>
-                        </div>
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+              efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</span
+            >
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your name..."
+                          required=""
+                        />
+                      </fieldset>
                     </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="start3()">START <br>
-                            開始</a>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your email..."
+                          required=""
+                        />
+                      </fieldset>
                     </div>
-
-                </div>
-
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          class="form-control"
+                          id="message"
+                          placeholder="Your message..."
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-    <!-- 第三步驟成功圖 -->
-    <div class="modal fade" id="success_3" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <img src="images/step-finsh-img.png" data-dismiss="modal" onclick="go_step_4()">
-            </div>
-        </div>
-    </div>
-
-    <!-- 第四個步驟 -->
-    <div class="modal fade" id="step_04" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-
-                        <div class="text-title">
-                            STEP 04<br/>食物分裝趣
-                        </div>
-
-                        <div class='text-container'>
-                            <p>
-                                接著要把已經開封跟裸露的食物改裝到密封的保鮮容器中，不只讓空間運用更有效率，還可以加強食物的保鮮喔!
-                            </p>
-                            <p class='text-remark'>
-                                點選裸露以及包裝不當的食物，改用合適的方式收納。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="start4()">START <br>
-                            開始</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 第四步驟成功圖 -->
-    <div class="modal fade" id="success_4" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <img src="images/step-finsh-img.png" data-dismiss="modal" onclick="go_step_5()">
-            </div>
-        </div>
-    </div>
-
-    <!-- 第五個步驟 -->
-    <div class="modal fade" id="step_05" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad">
-
-                        <div class="text-title">
-                            STEP 05<br/>食物選邊站
-                        </div>
-
-                        <div class='text-container'>
-                            <p>
-                                最後要幫食物重新安排房間，上層放「要盡快吃掉的」熟食或開封過的食物，才不會忘記，而下層因為「濕度較高」，適合擺蔬菜與水果類的食物，但別忘了「生食與熟食不可擺一起」喔!
-                            </p>
-                            <p class='text-remark'>
-                                將食物依適合的類別分層擺放，完成後點擊「整理完成!」按鈕。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button" data-dismiss="modal" onclick="start5()">START <br>
-                            開始</a>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 第五個步驟有錯的成功頁 -->
-    <div class="modal fade" id="game_finial_1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad finish_pad">
-                        <div class="text-title">
-                            我的<br/>冰箱管理術
-                        </div>
-                        <div class='text-container'>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>STEP 01</td>
-                                        <td>食物大搬家</td>
-                                        <td><span id="step_1_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 02</td>
-                                        <td>冰箱大掃除</td>
-                                        <td><span id="step_2_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 03</td>
-                                        <td>食物斷捨離</td>
-                                        <td><span id="step_3_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 04</td>
-                                        <td>食物分裝趣</td>
-                                        <td><span id="step_4_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 05</td>
-                                        <td>食物選邊站</td>
-                                        <td><span id="step_5_time"> </span> 秒</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="finish-title">
-                                分層錯誤 +10 秒 <br> 共花了 <span id="success_total2"> </span> 秒
-                            </div>
-                            <p>
-                                在開始整理冰箱前，我們得先把冰箱裡的食物都先拿出來，記得先切斷電源並拔除插頭再開始清理喔!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button exit-button">重新開始遊戲</a>
-                        <!--                        <a href="" class="button" data-dismiss="modal">重新開始遊戲</a>-->
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- 第五個步驟都對的成功頁 -->
-    <div class="modal fade" id="game_finial_2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="word_pad finish_pad">
-                        <div class="text-title">
-                            我的<br/>冰箱管理術
-                        </div>
-                        <div class='text-container'>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>STEP 01</td>
-                                        <td>食物大搬家</td>
-                                        <td><span id="success_1_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 02</td>
-                                        <td>冰箱大掃除</td>
-                                        <td><span id="success_2_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 03</td>
-                                        <td>食物斷捨離</td>
-                                        <td><span id="success_3_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 04</td>
-                                        <td>食物分裝趣</td>
-                                        <td><span id="success_4_time"> </span> 秒</td>
-                                    </tr>
-                                    <tr>
-                                        <td>STEP 05</td>
-                                        <td>食物選邊站</td>
-                                        <td><span id="success_5_time"> </span> 秒</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="finish-title">
-                                共花了 <span id="success_total"> </span> 秒
-                            </div>
-                            <p>
-                                哇!你完成了所有關卡，練成了冰箱管理術，是真正的冰箱管理大師呢!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <div class="box-shadow">
-                        <a href="" class="button exit-button">重新開始遊戲</a>
-                        <!--                        <a href="" class="button" data-dismiss="modal">重新開始遊戲</a>-->
-                    </div>
-                </div>
-
-            </div>
-        </div>
+      </section>
     </div>
 
-    <script type="text/javascript">
-        function setCookie(cname, cvalue, exdays) {
-            const d = new Date();
-            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-            let expires = "expires=" + d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
         }
+      };
 
-        function getCookie(cname) {
-            let name = cname + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-
-        function AllowDrop(event) {
-            event.preventDefault();
-        }
-
-        function Drag(event) {
-            event.dataTransfer.setData("move_img_id", event.currentTarget.id);
-            var move_img_id = event.currentTarget.id;
-            //找父層div元素
-            var div = document.getElementById(move_img_id).parentNode;
-            // alert(div.getAttribute('id'));
-            event.dataTransfer.setData("div_id", div.getAttribute('id'));
-
-            // event.dataTransfer.setData("dev_html",event.currentTarget.id);
-        }
-
-        function Drop(event) {
-            event.preventDefault();
-
-            var move_img_id = event.dataTransfer.getData("move_img_id");
-            var moved_img_id = event.currentTarget.children[0].getAttribute('id');
-            var div_id = event.dataTransfer.getData("div_id");
-            // 移動的圖片跳過去新區塊
-            event.currentTarget.appendChild(document.getElementById(move_img_id));
-            // 本來的區塊圖片跳到移動圖片的區塊
-            document.getElementById(div_id).appendChild(document.getElementById(moved_img_id));
-
-        }
-        // window.onload = function(){
-        //     document.getElementById('game_step_01').click();
-        // }
-
-        //一開始有包裝的食物先隱藏
-        $("#p_food_01").hide();
-
-        $("#p_food_02").hide();
-        $("#p_food_03").hide();
-        $("#p_food_04").hide();
-
-        $("#p_food_05_1").hide();
-        $("#p_food_05").hide();
-        $("#p_food_06").hide();
-        $("#p_food_07").hide();
-
-        $("#p_food_08").hide();
-        $("#p_food_09").hide();
-
-        $("#p_food_10").hide();
-        $("#p_food_11").hide();
-        $("#p_food_12").hide();
-        $("#p_food_13").hide();
-        $("#p_food_14").hide();
-        $("#p_food_15").hide();
-        $("#p_food_16").hide();
-        $("#p_food_17").hide();
-
-        //開始遊戲按鈕
-        function game_start() {
-            $('#game_start2').modal('show');
-            document.cookie = "bad_times=;";
-            document.cookie = "dirt_times=;";
-
-            setTimeout(function() {
-                $('#game_start2').modal('hide');
-                $('#step_01').modal('show');
-            }, 2000);
-        }
-
-        function to_step1() {
-            $('#step_01').modal('show');
-        }
-
-        // 存放碼錶參數
-        var mm = '';
-
-        // 每個步驟時間
-        var step_1_time = '';
-        var step_2_time = '';
-        var step_3_time = '';
-        var step_4_time = '';
-        var step_5_time = '';
-        //
-
-        //第1步驟點開始按鈕
-        function start1() {
-            $('#plus').modal('show');
-            var SetMinute = 0;
-
-            mm = window.setInterval(function() {
-                SetMinute += 1;
-                var Check_i = document.getElementById("Check_i");
-                var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);
-                var Cal_Second = SetMinute % 60;
-
-                Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + ":" + ("0" + Cal_Second).slice(-2);
-            }, 1000);
-
-            // setCookie('cookie_time', mm, 1);
-        }
-
-        $('.plugButton').click(function() {
-            $('.plug-content').addClass('plug-content-separate');
-            setTimeout(function() {
-                $('#plus').modal('hide');
-                $('#staticBackdrop').modal('show');
-            }, 1000);
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
         });
-
-        //點清空冰箱
-        function clear_all() {
-            // 碼表停止
-            window.clearInterval(mm);
-
-            $("#bad_food_01").hide();
-            $("#bad_food_02").hide();
-            $("#food_01").hide();
-
-            $("#bad_food_03").hide();
-            $("#bad_food_04").hide();
-            $("#food_02").hide();
-            $("#food_03").hide();
-            $("#food_04").hide();
-
-            // $("#dirt_03_1").hide();
-            $("#bad_food_05").hide();
-            $("#bad_food_06").hide();
-            $("#bad_food_07").hide();
-            $("#food_05").hide();
-            $("#food_06").hide();
-            $("#food_07").hide();
-
-            $("#bad_food_08").hide();
-            $("#bad_food_09").hide();
-            $("#bad_food_10").hide();
-            $("#food_08").hide();
-            $("#food_09").hide();
-
-            $("#bad_food_11").hide();
-            $("#food_10").hide();
-            $("#food_11").hide();
-            $("#food_12").hide();
-            $("#food_13").hide();
-            $("#bad_food_12").hide();
-            $("#food_14").hide();
-            $("#food_15").hide();
-            $("#food_16").hide();
-            $("#food_17").hide();
-
-            //碼錶的秒數
-            var Check_i = document.getElementById("Check_i").innerText;
-
-            step_1_time = Check_i;
-            //在cookie紀錄第一筆時間
-            // setCookie('step_1_time', Check_i, 1);
-
-            $('#success').modal('show');
-        }
-
-        function go_step_2() {
-
-            var Check_i = document.getElementById("Check_i");
-            //碼表歸0
-            Check_i.innerHTML = "00:00";
-
-            $('#step_02').modal('show');
-        }
-
-        const dirt_ids = [
-            "bacteria_01",
-            "bacteria_02",
-            "bacteria_03",
-            "bacteria_04",
-            "bacteria_05",
-            "bacteria_06",
-            "bacteria_07",
-            "bacteria_08",
-            "bacteria_09",
-            "bacteria_10",
-            "bacteria_11",
-            "bacteria_12",
-            "bacteria_13",
-            "bacteria_14",
-            "bacteria_15",
-            "bacteria_16",
-            "dirt_01",
-            "dirt_02",
-            "dirt_03_1",
-            "dirt_04",
-            "dirt_05",
-            "dirt_06"
-        ];
-
-        //第2步驟點開始按鈕
-        function start2() {
-
-            for (let i = 1; i < 17; i++) {
-                var str = "#bacteria" + i;
-                $(str).addClass("object-light");
-            }
-
-            for (let i = 1; i < 7; i++) {
-                var str = "#dirt" + i;
-                $(str).addClass("object-light");
-            }
-
-            var SetMinute = 0;
-
-            mm = window.setInterval(function() {
-                SetMinute += 1;
-                var Check_i = document.getElementById("Check_i");
-                var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);
-                var Cal_Second = SetMinute % 60;
-
-                Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + ":" + ("0" + Cal_Second).slice(-2);
-            }, 1000);
-
-            // setCookie('cookie_time', mm, 1);
-            // document.cookie = "dirt_times=;";
-        }
-
-        //點擊髒汙
-        function no_show(id) {
-            var str = '#' + id;
-            $(str).hide();
-
-            const index = dirt_ids.indexOf(id);
-            if (index > -1) { // only splice array when item is found
-                dirt_ids.splice(index, 1); // 2nd parameter means remove one item only
-            }
-
-            //碼錶的秒數
-            var Check_i = document.getElementById("Check_i").innerText;
-            //在cookie紀錄第二筆時間
-            step_2_time = Check_i;
-
-            //全部點掉為0時
-            if (dirt_ids.length == 0) {
-                window.clearInterval(mm);
-                $('#success_2').modal('show');
-            }
-
-            console.log(dirt_ids);
-
-
-
-
-            // var dirt_times = 0;
-            //
-            // if (getCookie('dirt_times')) {
-            //     dirt_times = parseInt(getCookie('dirt_times')) + 1;
-            // } else {
-            //     dirt_times = 1;
-            // }
-            // setCookie('dirt_times', dirt_times, 1);
-            //
-            // if (parseInt(dirt_times) === 22) {
-            //     // 碼表停止
-            //     window.clearInterval(mm);
-            //     //碼錶的秒數
-            //     var Check_i = document.getElementById("Check_i").innerText;
-            //     //在cookie紀錄第二筆時間
-            //     setCookie('step_2_time', Check_i, 1);
-            //     //清空點擊次數
-            //     document.cookie = "dirt_times=;";
-            //     $('#success_2').modal('show');
-            //
-            // }
-            // alert(getCookie('dirt_times'));
-        }
-
-        function go_step_3() {
-            $("#bad_food_01").show();
-            $("#bad_food_02").show();
-            $("#food_01").show();
-            $("#bad_food_03").show();
-            $("#bad_food_04").show();
-            $("#food_02").show();
-            $("#food_03").show();
-            $("#food_04").show();
-            $("#bad_food_05").show();
-            $("#bad_food_06").show();
-            $("#bad_food_07").show();
-            $("#food_05").show();
-            $("#food_06").show();
-            $("#food_07").show();
-            $("#bad_food_08").show();
-            $("#bad_food_09").show();
-            $("#bad_food_10").show();
-            $("#food_08").show();
-            $("#food_09").show();
-            $("#bad_food_11").show();
-            $("#food_10").show();
-            $("#food_11").show();
-            $("#food_12").show();
-            $("#food_13").show();
-            $("#bad_food_12").show();
-            $("#food_14").show();
-            $("#food_15").show();
-            $("#food_16").show();
-            $("#food_17").show();
-            $("#p_food_05_1").show();
-            $('#step_03').modal('show');
-            var Check_i = document.getElementById("Check_i");
-            //碼表歸0
-            Check_i.innerHTML = "00:00";
-        }
-
-        //第3步驟點開始按鈕
-        function start3() {
-
-            for (let i = 1; i < 13; i++) {
-                var str = "#bad" + i;
-                $(str).addClass("food-object-ing");
-                $(str).addClass("object-light");
-            }
-
-            var SetMinute = 0;
-
-            mm = window.setInterval(function() {
-                SetMinute += 1;
-                var Check_i = document.getElementById("Check_i");
-                var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);
-                var Cal_Second = SetMinute % 60;
-
-                Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + ":" + ("0" + Cal_Second).slice(-2);
-            }, 1000);
-
-            // setCookie('cookie_time', mm, 1);
-            // document.cookie = "bad_times=;";
-        }
-
-        const bad_food_ids = [
-            "bad_food_01",
-            "bad_food_02",
-            "bad_food_03",
-            "bad_food_04",
-            "bad_food_05",
-            "bad_food_06",
-            "bad_food_07",
-            "bad_food_08",
-            "bad_food_09",
-            "bad_food_10",
-            "bad_food_11",
-            "bad_food_12"
-        ];
-
-        // 隱藏壞掉的食物
-        function no_show_food(id) {
-            var str = '#' + id;
-            $(str).hide();
-
-            const index = bad_food_ids.indexOf(id);
-            if (index > -1) { // only splice array when item is found
-                bad_food_ids.splice(index, 1); // 2nd parameter means remove one item only
-            }
-
-            //碼錶的秒數
-            var Check_i = document.getElementById("Check_i").innerText;
-            //在cookie紀錄第二筆時間
-            step_3_time = Check_i;
-
-            if (bad_food_ids.length == 0) {
-                window.clearInterval(mm);
-                $('#success_3').modal('show');
-            }
-
-            // var bad_times = 0;
-            //
-            // if (getCookie('bad_times')) {
-            //     bad_times = parseInt(getCookie('bad_times')) + 1;
-            // } else {
-            //     bad_times = 1;
-            // }
-            // setCookie('bad_times', bad_times, 1);
-            //
-            // if (parseInt(bad_times) === 12) {
-            //     // 碼表停止
-            //     window.clearInterval(getCookie('cookie_time'));
-            //     //碼錶的秒數
-            //     var Check_i = document.getElementById("Check_i").innerText;
-            //     //在cookie紀錄第二筆時間
-            //     setCookie('step_3_time', Check_i, 1);
-            //     //清空點擊次數
-            //     document.cookie = "bad_times=;";
-            //     $('#success_3').modal('show');
-            //
-            // }
-            // alert(getCookie('bad_times'));
-        }
-
-        function go_step_4() {
-
-            $('#food1').attr('onclick', "pack_food('food_01')");
-            $('#food2').attr('onclick', "pack_food('food_02')");
-            $('#food3').attr('onclick', "pack_food('food_03')");
-            $('#food4').attr('onclick', "pack_food('food_04')");
-            $('#food5').attr('onclick', "pack_food('food_05')");
-            $('#food6').attr('onclick', "pack_food('food_06')");
-            $('#food7').attr('onclick', "pack_food('food_07')");
-            $('#food8').attr('onclick', "pack_food('food_08')");
-            $('#food9').attr('onclick', "pack_food('food_09')");
-            $('#food10').attr('onclick', "pack_food('food_10')");
-            $('#food11').attr('onclick', "pack_food('food_11')");
-            $('#food12').attr('onclick', "pack_food('food_12')");
-            $('#food13').attr('onclick', "pack_food('food_13')");
-            $('#food14').attr('onclick', "pack_food('food_14')");
-            $('#food15').attr('onclick', "pack_food('food_15')");
-            $('#food16').attr('onclick', "pack_food('food_16')");
-            $('#food17').attr('onclick', "pack_food('food_17')");
-
-            var Check_i = document.getElementById("Check_i");
-            //碼表歸0
-            Check_i.innerHTML = "00:00";
-
-            $('#step_04').modal('show');
-        }
-
-        const pack_food_ids = [
-            "food_01",
-            "food_02",
-            "food_03",
-            "food_04",
-            "food_05",
-            "food_06",
-            "food_07",
-            "food_08",
-            "food_09",
-            "food_10",
-            "food_11",
-            "food_12",
-            "food_13",
-            "food_14",
-            "food_15",
-            "food_16",
-            "food_17"
-        ];
-
-        function start4() {
-
-            for (let i = 1; i < 18; i++) {
-                var str = "#food" + i;
-                $(str).addClass("object-light");
-            }
-
-            var SetMinute = 0;
-
-            mm = window.setInterval(function() {
-                SetMinute += 1;
-                var Check_i = document.getElementById("Check_i");
-                var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);
-                var Cal_Second = SetMinute % 60;
-
-                Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + ":" + ("0" + Cal_Second).slice(-2);
-            }, 1000);
-
-            // setCookie('cookie_time', mm, 1);
-            // //清空點擊次數
-            // document.cookie = "pack_times=;";
-        }
-
-        function pack_food(id) {
-            var out_str = '#' + id;
-            var in_str = '#p_' + id;
-
-            $(out_str).fadeOut("slow");
-            $(in_str).fadeIn("slow");
-
-            const index = pack_food_ids.indexOf(id);
-            if (index > -1) { // only splice array when item is found
-                pack_food_ids.splice(index, 1); // 2nd parameter means remove one item only
-            }
-
-            //碼錶的秒數
-            var Check_i = document.getElementById("Check_i").innerText;
-            //在cookie紀錄第二筆時間
-            step_4_time = Check_i;
-
-            if (pack_food_ids.length == 0) {
-                window.clearInterval(mm);
-                $('#success_4').modal('show');
-            }
-
-            // var pack_times = 0;
-            //
-            // if (getCookie('pack_times')) {
-            //     pack_times = parseInt(getCookie('pack_times')) + 1;
-            // } else {
-            //     pack_times = 1;
-            // }
-            // setCookie('pack_times', pack_times, 1);
-            //
-            // if (parseInt(pack_times) === 17) {
-            //     // 碼表停止
-            //     window.clearInterval(getCookie('cookie_time'));
-            //     //碼錶的秒數
-            //     var Check_i = document.getElementById("Check_i").innerText;
-            //     //在cookie紀錄第二筆時間
-            //     setCookie('step_4_time', Check_i, 1);
-            //     //清空點擊次數
-            //     document.cookie = "pack_times=;";
-            //     $('#success_4').modal('show');
-            //
-            // }
-
-        }
-
-        function go_step_5() {
-            $('#step_05').modal('show');
-            $('.floor-title').show();
-            $('.p-title').show();
-            var Check_i = document.getElementById("Check_i");
-            //碼表歸0
-            Check_i.innerHTML = "00:00";
-        }
-
-        function start5() {
-
-            for (let i = 1; i < 6; i++) {
-                var str = "#Box" + i;
-                $(str).addClass("object-light");
-            }
-
-            $('#finish_btn').show();
-            var SetMinute = 0;
-
-            mm = window.setInterval(function() {
-                SetMinute += 1;
-                var Check_i = document.getElementById("Check_i");
-                var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);
-                var Cal_Second = SetMinute % 60;
-
-                Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + ":" + ("0" + Cal_Second).slice(-2);
-            }, 1000);
-
-        }
-
-        function game_finial() {
-
-            for (let i = 1; i < 6; i++) {
-                var str = "#Box" + i;
-                $(str).removeClass("object-light");
-            }
-            var success_time = 0;
-            //Box1 熟食區
-            var children1 = document.getElementById("Box1").children;
-            // console.log(children);
-            // console.log(children[0].id);
-            if (children1[0].id == 'Img3')
-                success_time = success_time + 1;
-
-            //Box2 蔬果
-            var children2 = document.getElementById("Box2").children;
-            if (children2[0].id == 'Img4' || children2[0].id == 'Img5')
-                success_time = success_time + 1;
-
-            //Box3 也是蔬果
-            var children3 = document.getElementById("Box3").children;
-            if (children3[0].id == 'Img4' || children3[0].id == 'Img5')
-                success_time = success_time + 1;
-
-            //Box4 隨時取用區
-            var children4 = document.getElementById("Box4").children;
-            if (children4[0].id == 'Img2')
-                success_time = success_time + 1;
-
-            //Box5 生鮮肉品區
-            var children5 = document.getElementById("Box5").children;
-            if (children5[0].id == 'Img1')
-                success_time = success_time + 1;
-
-            window.clearInterval(mm);
-
-            var Check_i = document.getElementById("Check_i").innerText;
-            //在cookie紀錄第二筆時間
-            step_5_time = Check_i;
-
-            $('#finish_btn').hide();
-
-            console.log(success_time);
-            console.log(step_1_time);
-            console.log(step_2_time);
-            console.log(step_3_time);
-            console.log(step_4_time);
-            console.log(step_5_time);
-
-            if (success_time == 5) {
-
-                var sec1 = parseInt(step_1_time.substr(-2));
-                var min1 = parseInt(step_1_time.substr(0, 2));
-                var total1 = 60 * min1 + sec1;
-                var td_1_time = document.getElementById("success_1_time");
-                td_1_time.innerHTML = total1;
-
-                var sec2 = parseInt(step_2_time.substr(-2));
-                var min2 = parseInt(step_2_time.substr(0, 2));
-                var total2 = 60 * min2 + sec2;
-                var td_2_time = document.getElementById("success_2_time");
-                td_2_time.innerHTML = total2;
-
-                var sec3 = parseInt(step_3_time.substr(-2));
-                var min3 = parseInt(step_3_time.substr(0, 2));
-                var total3 = 60 * min3 + sec3;
-                var td_3_time = document.getElementById("success_3_time");
-                td_3_time.innerHTML = total3;
-
-                var sec4 = parseInt(step_4_time.substr(-2));
-                var min4 = parseInt(step_4_time.substr(0, 2));
-                var total4 = 60 * min4 + sec4;
-                var td_4_time = document.getElementById("success_4_time");
-                td_4_time.innerHTML = total4;
-
-                var sec5 = parseInt(step_5_time.substr(-2));
-                var min5 = parseInt(step_5_time.substr(0, 2));
-                var total5 = 60 * min5 + sec5;
-                var td_5_time = document.getElementById("success_5_time");
-                td_5_time.innerHTML = total5;
-
-                var total_sec = total1 + total2 + total3 + total4 + total5;
-                var success_total = document.getElementById("success_total");
-                success_total.innerHTML = total_sec;
-                $('#game_finial_2').modal('show');
-            } else {
-                //把時間填進去
-                var sec1 = parseInt(step_1_time.substr(-2));
-                var min1 = parseInt(step_1_time.substr(0, 2));
-                var total1 = 60 * min1 + sec1;
-                var td_1_time = document.getElementById("step_1_time");
-                td_1_time.innerHTML = total1;
-
-                var sec2 = parseInt(step_2_time.substr(-2));
-                var min2 = parseInt(step_2_time.substr(0, 2));
-                var total2 = 60 * min2 + sec2;
-                var td_2_time = document.getElementById("step_2_time");
-                td_2_time.innerHTML = total2;
-
-                var sec3 = parseInt(step_3_time.substr(-2));
-                var min3 = parseInt(step_3_time.substr(0, 2));
-                var total3 = 60 * min3 + sec3;
-                var td_3_time = document.getElementById("step_3_time");
-                td_3_time.innerHTML = total3;
-
-                var sec4 = parseInt(step_4_time.substr(-2));
-                var min4 = parseInt(step_4_time.substr(0, 2));
-                var total4 = 60 * min4 + sec4;
-                var td_4_time = document.getElementById("step_4_time");
-                td_4_time.innerHTML = total4;
-
-                var sec5 = parseInt(step_5_time.substr(-2));
-                var min5 = parseInt(step_5_time.substr(0, 2));
-                var total5 = 60 * min5 + sec5;
-                var td_5_time = document.getElementById("step_5_time");
-                td_5_time.innerHTML = total5;
-
-                var total_sec = total1 + total2 + total3 + total4 + total5 + 10;
-                var success_total = document.getElementById("success_total2");
-                success_total.innerHTML = total_sec;
-
-                $('#game_finial_1').modal('show');
-            }
-        }
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
     </script>
-
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-
-<script>
-    $('#game_start').modal('show');
-    $('#plus').modal('hide');
-    $('#game_start2').modal('hide');
-    $('#step_01').modal('hide');
-    $('#staticBackdrop').modal('hide');
-    $('#step_02').modal('hide');
-    $('#success').modal('hide');
-    $('#step_03').modal('hide');
-    $('#step_04').modal('hide');
-    $('#step_05').modal('hide');
-    $('#success_2').modal('hide');
-    $('#success_3').modal('hide');
-    $('#success_4').modal('hide');
-    $('#game_finial_1').modal('hide');
-    $('#game_finial_2').modal('hide');
-    $('.floor-title').hide();
-    $('.p-title').hide();
-    $('#finish_btn').hide();
-</script>
-<!--<script type="text/javascript">-->
-<!--    var SetMinute = 0;-->
-
-<!--    function Check_Time() {-->
-<!--        SetMinute += 1;-->
-<!--        var Check_i = document.getElementById("Check_i");-->
-<!--        var Cal_Minute = Math.floor(Math.floor(SetMinute % 3600) / 60);-->
-<!--        var Cal_Second = SetMinute % 60;-->
-
-<!--        Check_i.innerHTML = ("0" + Cal_Minute).slice(-2) + " : " + ("0" + Cal_Second).slice(-2) ;-->
-
-<!--    }-->
-<!--    var mm = window.setInterval("Check_Time()", 1000);-->
-
-<!--</script>-->
-
+  </body>
 </html>
