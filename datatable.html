@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="images/Azulmedia.css" type="text/css"/>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <title>Azulmedia</title>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1 id="logo">azul<span class="gray">media</span></h1>
+        <h2 id="slogan">Put your site slogan here...</h2>
+                <div id="menu">
+                    <ul>
+                        <li id="current"><a href="#">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+    </div>
+    <div id="content-wrap">
+        <div id="sidebar">
+            <h1 class="clear">前端相關</h1>
+            <ul class="sidemenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/datatable.html">DataTable</a></li>
+                <li><a href="/swagger.html">Swagger UI</a></li>
+                <li><a href="#">More Free Templates</a></li>
+                <li><a href="#">Premium Templates</a></li>
+            </ul>
+            <h1>Site Partners</h1>
+            <ul class="sidemenu">
+                <li><a href="#">Dreamhost</a></li>
+                <li><a href="#">4templates</a></li>
+                <li><a href="#">TemplateMonster</a></li>
+                <li><a href="#">Fotolia.com</a></li>
+                <li><a href="#">Text Link Ads</a></li>
+            </ul>
+
+            <h1>Wise Words</h1>
+            <p>&quot;The happiest people are those who invested their time in others. The unhappiest people are those
+                who wonder how the world is going to make them happy&quot;</p>
+            <p class="align-right">- John Maxwell</p>
+            <h1>Support Styleshout</h1>
+            <p>If you are interested in supporting my work and would like to contribute, you are welcome to make a small
+                donation through the <a href="http://www.styleshout.com/">donate link</a> on my website - it will be a
+                great help and will surely be appreciated.</p>
+        </div>
+        <div id="main">
+            <a name="DataTable"></a>
+            <div class="box">
+                <h1>DataTable <span class="gray">筆記</span></h1>
+
+                <h3>colvis 調整顯示欄位</h3>
+                <p>文件路徑: https://datatables.net/reference/button/colvis</p>
+
+                <pre><code class="language-html">
+                    var table = $('#tradeTable2').DataTable({
+                        dom: 'Brt',
+                        paging: false,
+                        ordering: false,
+                        orderCellsTop: true,
+                        columnDefs: [
+                            {
+                                targets: [ 2,4,6,7,9,14 ],
+                                visible: false
+                            }
+                        ],
+                        buttons: [
+                            {
+                                extend: 'colvis',
+                                columns: ':not(.noVis)',
+                                text: 'Select columns',
+                                columnText: function ( dt, idx, title ) {
+                                    return (idx + 1) + ': ' + title;
+                                },
+                            }
+                        ]
+                    });
+                </code></pre>
+
+                <p>
+                    columnDefs : 預設隱藏的欄位，targets 表示一開始顯示欄位
+                    buttons :  extend 引入 colvis，text 自訂欄位文字，columText 為點了button後個欄位文字
+                </p>
+
+                <p>
+                    效果預覽圖 :
+
+                </p>
+                <p>
+                    <img src="Images/datatable1.png" width="60%">
+                </p>
+                <br>
+                <p>
+                    需要帶入css 與 js :
+                </p>
+                <ul>
+                    <li>https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css</li>
+                    <li>https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css</li>
+                    <li>https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js</li>
+                    <li>https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js</li>
+                    <li>https://cdn.datatables.net/buttons/2.0.0/js/buttons.colVis.min.js</li>
+                </ul>
+
+                <h3>Excel 匯出</h3>
+                <p>
+                    匯出excel ，會匯出所有欄位，不管有沒有被colvis隱藏
+                </p>
+                <p>
+                    文件路徑 : https://datatables.net/extensions/buttons/examples/html5/simple.html
+                </p>
+
+                <pre><code class="language-html">
+                    buttons: [
+                       'excelHtml5',
+                       {
+                          extend: 'colvis',
+                          columns: ':not(.noVis)',
+                          text: 'Select columns'
+                       }
+                    ],
+                </code></pre>
+
+                <br/>
+            </div>
+        </div>
+        <br/>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<div id="footer-wrap">
+    <div class="footer-left">
+        <p class="align-left"> &copy; 2006 <strong>Company Name</strong> | Design by <a
+                href="http://www.styleshout.com/">styleshout</a> | Valid <a
+                href="http://validator.w3.org/check/referer">XHTML</a> | <a
+                href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></p>
+    </div>
+    <div class="footer-right">
+        <p class="align-right"><a href="#">Home</a>&nbsp;|&nbsp; <a href="#">SiteMap</a>&nbsp;|&nbsp; <a href="#">RSS
+            Feed</a></p>
+    </div>
+</div>
+</body>
+</html>
