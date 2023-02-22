@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="images/Azulmedia.css" type="text/css"/>
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <title>Azulmedia</title>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1 id="logo">azul<span class="gray">media</span></h1>
+        <h2 id="slogan">Put your site slogan here...</h2>
+        <div id="menu">
+            <ul>
+                <li id="current"><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Downloads</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="content-wrap">
+        <div id="sidebar">
+            <h1 class="clear">前端相關</h1>
+            <ul class="sidemenu">
+                <!--                <li><a href="/">Home</a></li>-->
+                <li><a href="/datatable.html">DataTable</a></li>
+                <li><a href="/swagger.html">Swagger UI</a></li>
+                <li><a href="/gorecaptcha.html">Google reCAPTCHA</a></li>
+                <!--                <li><a href="#">Premium Templates</a></li>-->
+            </ul>
+            <h1>Docker</h1>
+            <ul class="sidemenu">
+                <li><a href="/docker.html">安裝python和ELK環境</a></li>
+                <li><a href="/docker2.html">Windows更新後遇到的坑</a></li>
+                <li><a href="/docker3.html">常用指令</a></li>
+                <li><a href="/docker4.html">Laradock</a></li>
+            </ul>
+            <h1>ELK</h1>
+            <ul class="sidemenu">
+                <li><a href="/elk.html">本機ELK安裝</a></li>
+                <li><a href="/elk2.html">Elasticsearch</a></li>
+                <li><a href="/elk3.html">資料重複處理</a></li>
+                <li><a href="/elk4.html">Kibana 資料檔案匯入</a></li>
+            </ul>
+            <h1>Laravel</h1>
+            <ul class="sidemenu">
+                <li><a href="/laravel.html">裝最新版Laravel的坑</a></li>
+                <li><a href="/laravel.html">Laravel 常用指令</a></li>
+            </ul>
+
+            <h1>Wise Words</h1>
+            <p>&quot;The happiest people are those who invested their time in others. The unhappiest people are those
+                who wonder how the world is going to make them happy&quot;</p>
+            <p class="align-right">- John Maxwell</p>
+
+        </div>
+        <div id="main">
+            <a name="DataTable"></a>
+            <div class="box">
+                <h1>Laravel 常用指令</h1>
+                <p>執行某個測試</p>
+                <p>使用環境是windows和xampp</p>
+                <ol>
+                    <li>windows 查詢打 "環境變數" ，點擊 "編輯系統環境變數”</li>
+                    <li>出現視窗如下，點擊環境變數
+                        <p><img src="images/laravel.png" width="40%"></p>
+
+                    </li>
+                    <li> 尋找系統變數的path，點擊 "編輯”
+                        <p><img src="images/laravel2.png" width="40%"></p>
+                    </li>
+                    <li> 設定要升級的php路徑
+                        <p><img src="images/laravel3.png" width="40%"></p>
+                    </li>
+                </ol>
+
+                <h3>laravel 在windows下用sail部屬</h3>
+                <p>要使用sail，需在微軟商店下載Ubuntu，xsl2 透過以下連結下載</p>
+                <p>https://docs.microsoft.com/en-us/windows/wsl/install-manual#step-2---check-requirements-for-running-wsl-2</p>
+                <p>打開Ubuntu介面，在專案路徑下，執行laravel 官方文件步驟 ( c槽路徑 : /mnt/c )</p>
+                <p>官方文檔 : https://laravel.com/docs/9.x/sail</p>
+                <p><img src="images/laravel4.png" width="40%"></p>
+                <p>使用sail就不用裝apache和mysql，可以直接運行Laravel</p>
+                <br/>
+            </div>
+        </div>
+        <br/>
+    </div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<div id="footer-wrap">
+    <div class="footer-left">
+        <!--        <p class="align-left"> &copy; 2006 <strong>Company Name</strong> | Design by <a-->
+        <!--                href="http://www.styleshout.com/">styleshout</a> | Valid <a-->
+        <!--                href="http://validator.w3.org/check/referer">XHTML</a> | <a-->
+        <!--                href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></p>-->
+    </div>
+    <div class="footer-right">
+        <!--        <p class="align-right"><a href="#">Home</a>&nbsp;|&nbsp; <a href="#">SiteMap</a>&nbsp;|&nbsp; <a href="#">RSS-->
+        <!--            Feed</a></p>-->
+    </div>
+</div>
+</body>
+</html>
